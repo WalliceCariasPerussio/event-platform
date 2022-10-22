@@ -12,7 +12,8 @@ export function Video(props: VideoProps){
   const {data} = useGetLessonBySlugQuery({
     variables: {
       slug: props.lessonSlug
-    }
+    },
+    fetchPolicy:"no-cache"
   })
 
   if (!data || !data.lesson) {
@@ -26,7 +27,7 @@ export function Video(props: VideoProps){
   return (
     <div className="flex-1">
       <div className="bg-black flex justify-center">
-        <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
+        <div className="h-full w-full sm:p-0 p-4 max-w-[1100px] max-h-[60vh] aspect-video">
           <Player>
             <Youtube videoId={data.lesson.videoId}/>
             <DefaultUi />

@@ -1,7 +1,7 @@
 import { Header } from "../components/Header";
 import { Sidebar } from "../components/Sidebar";
 import { Video } from "../components/Video";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { useGetFirstSlugLessonQuery } from "../graphql/generated";
 
 export function Event(){
@@ -18,7 +18,9 @@ export function Event(){
 
   return (
     <div className="flex flex-col min-h-screen" >
-      <Header />
+      <Link to='/'>
+        <Header />
+      </Link>
       <main className="sm:flex flex-1">
         { slug
           ? <Video lessonSlug={slug} />

@@ -27,9 +27,13 @@ export function Subscribe(){
 
   return (
     <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
-      <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
-        <div className="max-w-[640px]">
-          <Logo/>
+      <div className="w-full max-w-[1100px] flex flex-col sm:flex-row  items-center justify-between sm:mt-20 mt-8 mx-auto">
+        <div className="sm:max-w-[640px] w-full px-2 sm:px-0 text-center sm:text-start ">
+    {/* <header className="w-full py-5 flex items-center justify-center bg-gray-700 border-b border-gray-600"> */}
+          <span className="w-full flex sm:items-start items-center justify-center sm:justify-start">
+            <Logo/>
+          </span>
+
           <h1 className="mt-8 text-[2.5rem] leading-tight" >
             Construa uma <strong className="text-blue-500">aplicação completa</strong>, do zero, com  <strong className="text-blue-500">React</strong>
           </h1>
@@ -38,7 +42,7 @@ export function Subscribe(){
           </p>
         </div>
 
-        <div className="p-8 bg-gray-700 border border-gray-500 rounded" >
+        <div className="p-8 bg-gray-700 border border-gray-500 rounded mt-2 sm:mt-0" >
           <strong className="text-2xl mb-6 block" >Inscreva-se gratuitamente</strong>
 
           <form onSubmit={handleSubscribe} action="" className="flex flex-col gap-2 w-full">
@@ -67,7 +71,7 @@ export function Subscribe(){
         </div>
       </div>
 
-      <img src={img} alt="" className="mt-10" />
+      <img src={img} alt="" className="sm:mt-10 mt-2" />
     </div>
   )
 }
