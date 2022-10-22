@@ -1,0 +1,5 @@
+query GetFirstSlugLesson {
+  lessons(first: 1, orderBy: publishedAt_ASC) {
+    slug
+  }
+}
